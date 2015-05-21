@@ -132,17 +132,17 @@ void adjustGas() {
       currentSpeed = (500 - currentSpeed) / 2;
       analogWrite(motorLPWM, currentSpeed);
       analogWrite(motorRPWM, 0);
-      Serial1.println("idem napred");
+      Serial1.println("going forward");                                      // for debug purpose only -- can be deleted  
     } else if (currentSpeed > 520 ) {
       currentSpeed = (currentSpeed - 520) / 2;
       analogWrite(motorRPWM, currentSpeed);
       analogWrite(motorLPWM, 0);
-      Serial1.println("idem nazad");
-      Serial1.println(currentSpeed);
+      Serial1.println("going backward");                                     // for debug purpose only -- can be deleted  
+      Serial1.println(currentSpeed);                                         // for debug purpose only -- can be deleted
     } else if (currentSpeed > 480 && currentSpeed < 520) {
       analogWrite(motorRPWM, 0);
       analogWrite(motorLPWM, 0);
-      Serial1.println("stojim");
+      Serial1.println("stoped");                                              // for debug purpose only -- can be deleted
 
     }
   }
